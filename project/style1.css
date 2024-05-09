@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(224, 214, 214, 0.9),hsla(68, 48%, 76%, 0.548)), url(image/homie.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;    
+}
+nav img{
+    width: 150pt;
+    cursor: pointer;
+}
+.navbar{
+    flex: 1;
+    text-align: right;
+}   
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 12px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight:bold;
+}
+.navbar ul li::after{
+    content: "";
+    height: 5px;
+    width: 0;
+    position: absolute;
+    background: #FFC0D9;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 60px;
+}
+
+.text-box p{
+    margin: 10px  40px;
+    font-size: 14pt;
+}
+
+.exp-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 12px 40px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.exp-button:hover{
+    border: 1px solid #000;
+    background: #FFC0D9;
+    transition: 1s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .navbar ul li{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        background: #FFC0D9;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    .header{
+        position: relative;
+        background-size: cover;
+    }
+
+    nav .fa{
+        display: block;
+        color: #000;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+.course{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-color: #A3D8FF;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #000;
+    font-size: 12pt;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+ 
+.btn-container{
+    padding: 40px 0;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.disable{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #FFC0D9;
+    border-radius: 100;
+    padding: 12px 20px;
+    font-size: 20px;
+    background: #FFC0D9;
+    position: relative;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.disable:hover{
+    border: 1px solid #000;
+    background: #FDFFC2;
+    transition: 1s;
+}
+
+.card-content .disable{
+    position: relative;
+    float: left;
+    cursor: pointer;
+    background-color: #FFC0D9;
+    text-align: center;
+    border: 1px solid #FFC0D9;
+    border-radius: inherit;
+    padding: 20px 12;
+    text-decoration: none;
+    margin-top: 12px;
+    margin-left: 12px;
+}
+.card{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content{
+    flex-basis: 31%;
+    background: #FDFFC2;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.card .card-content img{
+    height: 16rem;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.card .card-content h3{
+    text-align: left;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.card .card-content p{
+    text-align: left;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.card-content:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.8);
+}
+
+.detail{
+    position: relative;
+    float: right;
+    cursor: pointer;
+    background-color: #FFC0D9;
+    text-align: center;
+    border: 1px solid #FFC0D9;
+    padding: 20px 5;
+    text-decoration: none;
+}
+
+.detail-button{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #FFC0D9;
+    padding: 12px 20px;
+    font-size: 13px;
+    background: #FFC0D9;
+    position: relative;
+    cursor: pointer;
+}
+
+@media (max-width: 700px){
+    .row{
+        flex-direction: column;
+
+    }
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.icons fa{
+    color: #000;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart{
+    color: #FFC0D9;
+}
+
+.footer p{
+    text-align: center;
+}
+
+.course-exp{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-color:#FDFFC2;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.course-exp img{
+    height: 20rem;
+    display: block;
+    justify-content: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.course-exp h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-exp p{
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 20px 0;
+}
+
+.book{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background-color: #FDFFC2;
+    margin-bottom: 20px;
+    min-height: 100vh;
+}
+
+.book .archie img{
+    justify-content: center;
+    position: relative;
+    height: 20rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+h3{
+    font-size: 20pt;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+
+p{
+    text-align: center;
+    margin: 10px 0;
+    color: black;
+}
